@@ -14,11 +14,12 @@
 
    ```bash
    git clone https://github.com/elisay1/GESTION-DE-ALUMNO.git
-   cd nombre-repo
+   cd GESTION-DE-ALUMNO
    
 2. Instalar dependencias BACKEND:
 
    ```bash
+     cd backend
      npm install
    
 3. Configurar variables de entorno BACKEND:
@@ -30,8 +31,25 @@
       DB_PASSWORD=tu_password
       DB_NAME=nombre_base
 
-4. Crear la base de datos y correr las migraciones (si aplica).
-
+4. Crear la base de datos
+  ```bash
+   gestionalumno
+  ```
+6. Crear la tabla
+  ```bash
+   CREATE TABLE `students` (
+     `id` INTEGER NOT NULL AUTO_INCREMENT ,
+     `sid` BIGINT NOT NULL UNIQUE,
+     `firstname` VARCHAR(255) NOT NULL,
+     `lastname` VARCHAR(255) NOT NULL,
+     `dni` BIGINT NOT NULL,
+     `email` VARCHAR(255) NOT NULL,
+     `deleted` TINYINT(1) DEFAULT 0,
+     `createdAt` DATETIME NOT NULL,
+     `updatedAt` DATETIME NOT NULL,
+     PRIMARY KEY (`id`)
+   ) ENGINE=InnoDB;
+  ```
 6. Ejecutar el backend:
 
   ```bash
@@ -54,4 +72,5 @@
  ```
 
 ---
->Puedes continuar el proyecto 
+>Puedes continuar el proyecto
+![image](https://github.com/user-attachments/assets/a92418cd-4d0d-447c-b49d-545d34c1ebeb)
