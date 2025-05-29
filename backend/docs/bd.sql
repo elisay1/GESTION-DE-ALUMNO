@@ -1,0 +1,12 @@
+CREATE TABLE `students` (
+  `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `sid` BIGINT NOT NULL UNIQUE,
+  `firstname` VARCHAR(255) NOT NULL,
+  `lastname` VARCHAR(255) NOT NULL,
+  `dni` BIGINT NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `deleted` TINYINT(1) DEFAULT 0,
+  `createdAt` DATETIME NOT NULL,
+  `updatedAt` DATETIME NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB;

@@ -1,0 +1,153 @@
+.layout-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background-color: #f5f7fa;
+  box-sizing: border-box;
+}
+
+.layout-menu {
+  /* width: 200px; */
+  padding: 1.5rem 1rem;
+  background-color: #001333;
+  color: #ffffff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-menu h2 {
+  font-size: 1.25rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  margin: 0 0 1.5rem 0;
+  padding-left: 0.5rem;
+  color: #ffffff;
+}
+
+.layout-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.layout-menu ul li {
+  margin: 0.5rem 0;
+  height: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.layout-menu ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  height: 100%;
+  border-radius: 6px;
+}
+
+.layout-menu ul li:hover {
+  background-color: #334d66;
+  font-weight: 600;
+}
+
+.layout-menu ul li:first-child:hover {
+  border-top-left-radius: 6px;
+}
+
+.layout-menu ul li:last-child:hover {
+  border-bottom-left-radius: 6px;
+}
+
+.layout-menu ul li .menu-selected {
+  background-color: #ffffff;
+  color: #001333;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.layout-menu ul li:first-child .menu-selected {
+  border-top-left-radius: 6px;
+}
+
+.layout-menu ul li:last-child .menu-selected {
+  border-bottom-left-radius: 6px;
+}
+
+.layout-main-content {
+  flex: 1;
+  padding: 1.5rem;
+  background-color: #f5f7fa;
+}
+
+.nav-link-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.75rem 0.5rem;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Móviles pequeños (hasta 576px) */
+@media (max-width: 576px) {
+  .layout-root {
+    flex-direction: column;
+  }
+  .layout-menu h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .layout-menu ul li {
+    margin: 0.3rem 0;
+    height: 2.2rem;
+  }
+  .layout-main-content {
+    padding: 1rem;
+  }
+  .nav-link-container {
+    padding: 0.6rem 0.5rem;
+  }
+}
+
+/* Tabletas y móviles grandes (576px - 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .layout-root {
+    flex-direction: column;
+  }
+  .layout-menu h2 {
+    font-size: 1.15rem;
+  }
+  .layout-menu ul li {
+    margin: 0.4rem 0;
+    height: 2.3rem;
+  }
+  .layout-main-content {
+    padding: 1.25rem;
+  }
+  .nav-link-container {
+    padding: 0.65rem 0.5rem;
+  }
+}
+
+/* Escritorios y pantallas grandes (>768px) */
+@media (min-width: 769px) {
+  .layout-root {
+    flex-direction: row;
+  }
+  .layout-menu {
+    width: 200px;
+    padding: 1.5rem 1rem;
+  }
+  .layout-menu h2 {
+    font-size: 1.25rem;
+  }
+  .layout-menu ul li {
+    margin: 0.5rem 0;
+    height: 2.5rem;
+  }
+  .layout-main-content {
+    padding: 1.5rem;
+  }
+  .nav-link-container {
+    padding: 0.75rem 0.5rem;
+  }
+}

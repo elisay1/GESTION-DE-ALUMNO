@@ -1,0 +1,231 @@
+.list-students {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.list-students .filter {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.list-students .filter input {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #001333;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list-students .filter input:focus {
+  outline: none;
+  border-color: #334d66;
+  box-shadow: 0 0 5px rgba(0, 19, 51, 0.3);
+}
+
+.list-students .table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list-students .table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.list-students .table th,
+.list-students .table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1rem;
+  color: #001333;
+  white-space: normal;
+  box-sizing: border-box;
+}
+
+.list-students .table th {
+  background-color: #001333;
+  color: #ffffff;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.list-students .table tr:hover {
+  background-color: #f5f7fa;
+  transition: background-color 0.3s ease;
+}
+
+.list-students .tableButtons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.list-students .pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+
+.list-students .pagination p {
+  margin: 0;
+  font-size: 1rem;
+  color: #001333;
+}
+
+.list-students .pagination select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #001333;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #001333;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list-students .pagination select:hover {
+  border-color: #334d66;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list-students .loading,
+.list-students .error {
+  font-size: 1rem;
+  color: #001333;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Móviles pequeños (hasta 576px) */
+@media (max-width: 576px) {
+  .list-students .filter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .list-students .filter input {
+    max-width: 100%;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+  .list-students .table th,
+  .list-students .table td {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .list-students .tableButtons {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .list-students .pagination {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .list-students .pagination p {
+    font-size: 0.9rem;
+  }
+  .list-students .pagination select {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+  .list-students .loading,
+  .list-students .error {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Tabletas y móviles grandes (576px - 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .list-students .filter {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .list-students .filter input {
+    max-width: 250px;
+    font-size: 0.95rem;
+    padding: 0.45rem 0.65rem;
+  }
+  .list-students .table th,
+  .list-students .table td {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  .list-students .tableButtons {
+    gap: 0.4rem;
+  }
+  .list-students .pagination {
+    gap: 0.5rem;
+    justify-content: flex-end;
+  }
+  .list-students .pagination p {
+    font-size: 0.95rem;
+  }
+  .list-students .pagination select {
+    font-size: 0.95rem;
+    padding: 0.45rem;
+  }
+  .list-students .loading,
+  .list-students .error {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+  }
+}
+
+/* Escritorios y pantallas grandes (>768px) */
+@media (min-width: 769px) {
+  .list-students .filter {
+    gap: 0.5rem;
+  }
+  .list-students .filter input {
+    max-width: 300px;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+  }
+  .list-students .table th,
+  .list-students .table td {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+  .list-students .tableButtons {
+    gap: 0.5rem;
+  }
+  .list-students .pagination {
+    gap: 0.5rem;
+    justify-content: flex-end;
+  }
+  .list-students .pagination p {
+    font-size: 1rem;
+  }
+  .list-students .pagination select {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .list-students .loading,
+  .list-students .error {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}

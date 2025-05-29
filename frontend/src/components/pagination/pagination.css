@@ -1,0 +1,122 @@
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0.5rem 0.75rem;
+  background-color: #001333;
+  color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #334d66;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #334d66;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+  color: #e0e0e0;
+  transform: none;
+  box-shadow: none;
+}
+
+.isSelected {
+  background-color: #ffffff;
+  color: #001333;
+  font-weight: 600;
+  border: 1px solid #001333;
+}
+
+.isNotSelected {
+  background-color: #001333;
+  color: #ffffff;
+}
+
+.pagination select {
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  border: 1px solid #001333;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #001333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination select:hover {
+  border-color: #334d66;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Móviles pequeños (hasta 576px) */
+@media (max-width: 576px) {
+  .pagination {
+    justify-content: center;
+    gap: 0.3rem;
+    padding: 0.5rem;
+  }
+  button {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+  }
+  .pagination select {
+    margin: 0 0.3rem;
+    padding: 0.4rem;
+    height: 2.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tabletas y móviles grandes (576px - 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .pagination {
+    justify-content: flex-end;
+    gap: 0.4rem;
+    padding: 0.75rem;
+  }
+  button {
+    padding: 0.45rem 0.65rem;
+    font-size: 0.95rem;
+  }
+  .pagination select {
+    margin: 0 0.4rem;
+    padding: 0.45rem;
+    height: 2.3rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Escritorios y pantallas grandes (>768px) */
+@media (min-width: 769px) {
+  .pagination {
+    justify-content: flex-end;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  button {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+  }
+  .pagination select {
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+}

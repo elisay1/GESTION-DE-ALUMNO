@@ -1,0 +1,209 @@
+.page-content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.page-content_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  background-color: #001333;
+  color: #ffffff;
+}
+
+.page-content_header h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.page-content_header_actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.page-content_main {
+  margin: 1.25rem;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.page-content_main a {
+  text-decoration: none;
+  color: #001333;
+  transition: color 0.3s ease;
+}
+
+.page-content_main a:hover {
+  color: #ffffff;
+}
+
+.page-content_list {
+  margin: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content_list .filter {
+  display: flex;
+  margin: 1.25rem 0 0.5rem 0;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.page-content_list .filter input {
+  width: 15%;
+  padding: 0.5rem;
+  border: 1px solid #001333;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.page-content_list .table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.page-content_form form {
+  margin: 1.25rem;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.page-content_form form div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.page-content_form form div p {
+  grid-column: 2 / 3;
+  color: #d32f2f;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin: -0.25rem 0 1rem 0;
+}
+
+.input-error {
+  border: 2px solid #d32f2f;
+  border-radius: 6px;
+}
+
+/* Móviles pequeños (hasta 576px) */
+@media (max-width: 576px) {
+  .page-content_header {
+    padding: 0.75rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .page-content_header h2 {
+    font-size: 1.1rem;
+  }
+  .page-content_header_actions {
+    margin-top: 0.5rem;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .page-content_main {
+    margin: 0.75rem;
+    padding: 1rem;
+  }
+  .page-content_list {
+    margin: 0.75rem;
+  }
+  .page-content_list .filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .page-content_list .filter input {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .page-content_form form {
+    margin: 0.75rem;
+    padding: 1rem;
+  }
+  .page-content_form form div {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .page-content_form form div p {
+    grid-column: 1 / 2;
+  }
+}
+
+/* Tabletas y móviles grandes (576px - 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .page-content_header {
+    padding: 1rem 1.25rem;
+  }
+  .page-content_header h2 {
+    font-size: 1.15rem;
+  }
+  .page-content_main {
+    margin: 1rem;
+    padding: 1.25rem;
+  }
+  .page-content_list {
+    margin: 1rem;
+  }
+  .page-content_list .filter {
+    gap: 0.5rem;
+  }
+  .page-content_list .filter input {
+    width: 25%;
+    font-size: 0.95rem;
+  }
+  .page-content_form form {
+    margin: 1rem;
+    padding: 1.25rem;
+  }
+  .page-content_form form div {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+}
+
+/* Escritorios y pantallas grandes (>768px) */
+@media (min-width: 769px) {
+  .page-content_header {
+    padding: 1rem 1.25rem;
+  }
+  .page-content_header h2 {
+    font-size: 1.25rem;
+  }
+  .page-content_main {
+    margin: 1.25rem;
+    padding: 1.25rem;
+  }
+  .page-content_list {
+    margin: 1.25rem;
+  }
+  .page-content_list .filter input {
+    width: 15%;
+    font-size: 1rem;
+  }
+  .page-content_form form {
+    margin: 1.25rem;
+    padding: 1.25rem;
+  }
+  .page-content_form form div {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+}
